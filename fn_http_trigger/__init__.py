@@ -5,7 +5,7 @@ import psycopg2
 
 host = "srvpostgresql-datainaction.postgres.database.azure.com"
 dbname = "cepbrasil"
-user = "adminpostgre"
+user = "adminpostgresql"
 password = "xxxxxx"
 sslmode = "require"
 
