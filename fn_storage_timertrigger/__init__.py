@@ -8,7 +8,7 @@ app = func.FunctionApp()
 def main(myTimer: func.TimerRequest) -> None:
     logging.warning(f">>>>> >>>>> <<<<< <<<<<")
     logging.warning('>>>>> Baixando Blob.')
-    blob = BlobClient.from_connection_string('DefaultEndpointsProtocol=https;AccountName=saflatdatalake;AccountKey=qHGDsICR1cyxB6Yf/+/EMkc12Tpm5eUM3qQWq/nwfV0lhzk9LDrD/0uxMo396B4S+Swm0WhBj4D/+ASt5lPVvw==;EndpointSuffix=core.windows.net','datalake','azurefunction/hello.txt')
+    blob = BlobClient.from_connection_string('SASToken','datalake','azurefunction/hello.txt')
 
     data = blob.download_blob()
     result = str(data.readall())
