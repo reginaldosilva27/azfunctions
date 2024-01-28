@@ -1,0 +1,20 @@
+{
+    "scriptFile": "__init__.py",
+    "bindings": [
+        {
+          "name": "changes",
+          "type": "sqlTrigger",
+          "direction": "in",
+          "tableName": "dbo.filaCEP",
+          "connectionStringSetting": "SqlConnectionString"
+        },
+        {
+          "name": "retornoCEP",
+          "type": "sql",
+          "direction": "out",
+          "commandText": "dbo.RetornoCEP",
+          "connectionStringSetting": "SqlConnectionString"
+        }
+      ],
+      "disabled": false
+  }
